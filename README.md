@@ -5,13 +5,13 @@ Each moodboard consists of a responsive 7x9 grid of squares and rectangles that 
 images or quotes. The grid is designed to scale dynamically with the viewport while  
 preserving proportions.
 
-## Features (Current Draft)
+## Features (Milestone 1: Version 1.0)
 - **Landing page** with tutorial/introduction.
 - **Control bar** at the bottom of the screen with navigation:
   - **Home** → returns to the landing page (`index.html`).
-  - **Mood** → dropdown with `Romantic` (working), `Happy` (TBA), `Calm` (TBA).
+  - **Mood** → dropdown with `Romantic`, `Happy` `Calm`.
   - **Theme** and **Search** → currently placeholders ("TBA").
-- **Romantic moodboard** (`romantic.html`) with:
+- **Three moodboards** (`romantic.html`, `happy.html`, `calm.html`) with:
   - Predefined 7x9 grid layout.
   - Support for multiple shapes (small/big squares, horizontal/vertical rectangles).
   - Placeholder images assigned manually (to be randomized later).
@@ -24,7 +24,6 @@ preserving proportions.
 - Pop-up modal to view images at full size with credits.
 - Theming system to filter grid items by tag.
 - Search functionality to look up images by keyword.
-- Additional moods (Happy, Calm, etc.) with their own image pools.
 
 ## Tech Stack
 - **HTML5**
