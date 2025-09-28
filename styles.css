@@ -47,6 +47,11 @@ body {
   z-index: 10;
 }
 
+#control-bar a {
+  text-decoration: none;
+  color: inherit;
+}
+
 #control-bar .nav-item {
   position: relative;
   background: #444;
@@ -58,8 +63,9 @@ body {
   transition: background 0.2s;
 }
 
-#control-bar .nav-item:hover {
+#control-bar > .nav-item:hover {
   background: #666;
+  font-weight: bold;
 }
 
 
@@ -87,6 +93,11 @@ body {
   overflow: hidden; 
 }
 
+.dropdown .dropdown-content a:hover {
+  font-weight: bold;
+  background: #555;
+}
+
 /* Show Dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: flex;
@@ -95,8 +106,6 @@ body {
 /* Temporarily replaces text with TBA for content to be added later */
 .theme:hover::after,
 .search:hover::after,
-.dropdown .dropdown-content a:nth-child(2):hover::after, /* Happy */
-.dropdown .dropdown-content a:nth-child(3):hover::after { /* Calm */
   content: "TBA";
   position: absolute;
   left: 0;
@@ -181,7 +190,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.65);
   z-index: 0;
 }
 
@@ -224,7 +233,8 @@ body {
   padding: 1rem;
 }
 
-#moodboard.romantic .grid {
+/* Generic grid for all moods */
+#moodboard .grid {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(7, 1fr);
@@ -238,6 +248,7 @@ body {
   max-height: calc(100vh - 140px);
 }
 
+
 /* Base grid item */
 .grid-item {
   display: flex;
@@ -246,7 +257,6 @@ body {
   font-weight: bold;
   color: white;
   border-radius: 6px;
-  border-color: white;
   overflow: visible;
   cursor: pointer;
   transition: transform 0.2s, border-radius 0.3s;
@@ -259,13 +269,15 @@ body {
   border-radius: 6px; 
   display: block;     
   transition: transform 0.3s ease, border-radius 0.3s ease;
+  border: 2px solid #BEBEBE;
 }
 
 .grid-item:hover img {
   transform: scale(2);
   z-index: 5;
-  border-radius: 50%; /* optional */
+  border-radius: 50%; /* optional, for circular effect */
 }
+
 
 /* Shapes */
 .small-square {
